@@ -13,6 +13,16 @@ var file = "test.db";
 
 var sqliteDB = new SqliteDB(file);
 
+/// drop table.
+
+var droptiletable = "drop table if exists tiles";
+
+var droplabeltable = "drop table if exists labels";
+
+sqliteDB.executeSql(droptiletable);
+
+sqliteDB.executeSql(droplabeltable);
+
 /// create table.
 
 var createTileTableSql =
